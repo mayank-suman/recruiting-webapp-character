@@ -105,3 +105,19 @@ button:hover {
   color: deeppink;
   font-weight: bold;
 }
+
+.class-details-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.class-details-list p {
+  display: flex;
+  text-align: left;
+}
+
+.class-details-list p span:first-child {
+  min-width: 120px;
+}

@@ -5,11 +5,12 @@ import { Class } from "../../types";
 function ClassDetails({ className }: { className: Class }) {
   return (
     <div className="App-section">
-      <h2>Class Requirements</h2>
-      <div>
+      <h2>Class Requirements {`(${className})`}</h2>
+      <div className="class-details-list">
         {Object.entries(CLASS_LIST[className]).map(([attribute, value]) => (
           <p key={attribute}>
-            {attribute}: {value}
+            <span>{attribute}: </span>
+            <span>{value}</span>
           </p>
         ))}
         {/* <p></p> */}
