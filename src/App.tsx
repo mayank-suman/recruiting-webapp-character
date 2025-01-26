@@ -1,6 +1,6 @@
 import "./App.css";
 import Attributes from "./components/attributes/list";
-import Class from "./components/class/list";
+import Class from "./components/class/index";
 import AttributesProvider from "./context/attributesContext";
 
 function App() {

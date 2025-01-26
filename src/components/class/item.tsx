@@ -1,17 +1,24 @@
-import React from "react";
-import { Attributes } from "../../types";
+import { Attributes, Class } from "../../types";
 import useAttributes from "../../hooks/useAttributes";
 import { checkAttributes } from "../../utils";
 
-function Item({ classItem }: { classItem: [string, Attributes] }) {
+function Item({
+  classItem,
+  setSelectedClass,
+}: {
+  classItem: [Class, Attributes];
+  setSelectedClass: (selectedClass: string) => void;
+}) {
   const { attributes } = useAttributes();
   const [className, classAttributes] = classItem;
   const areRequirementsMet = checkAttributes(classAttributes, attributes);
 
   return (
-    <div className={`class-item ${areRequirementsMet ? "highlight" : ""}`}>
-      {className}
-    </div>
+    <button onClick={() => setSelectedClass(className)}>
+      <div className={`class-item ${areRequirementsMet ? "highlight" : ""}`}>
+        {className}
+      </div>
+    </button>
   );
 }
 
