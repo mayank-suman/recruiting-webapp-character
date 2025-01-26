@@ -27,15 +27,19 @@ const reducer = (state: DerivedAttributes[], action) => {
   }
 };
 
-const getInitialValue = () =>
-  ATTRIBUTE_LIST.map((attribute, index) => ({
+const getInitialValue = (list: string[]) =>
+  list.map((attribute, index) => ({
     id: index,
     label: attribute,
-    value: 0,
+    value: 9,
   }));
 
 function AttributesProvider({ children }: PropsWithChildren) {
-  const [attributes, dispatch] = useReducer(reducer, getInitialValue());
+  const [attributes, dispatch] = useReducer(
+    reducer,
+    ATTRIBUTE_LIST,
+    getInitialValue
+  );
   const increment = (id: number) => dispatch({ type: "increment", id });
   const decrement = (id: number) => dispatch({ type: "decrement", id });
 
