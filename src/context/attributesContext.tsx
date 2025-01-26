@@ -1,4 +1,9 @@
-import { createContext, PropsWithChildren, useReducer } from "react";
+import {
+  createContext,
+  PropsWithChildren,
+  useCallback,
+  useReducer,
+} from "react";
 import { ATTRIBUTE_LIST } from "../consts";
 import { AttributesContextType, DerivedAttributes } from "../types";
 
@@ -40,8 +45,16 @@ function AttributesProvider({ children }: PropsWithChildren) {
     ATTRIBUTE_LIST,
     getInitialValue
   );
-  const increment = (id: number) => dispatch({ type: "increment", id });
-  const decrement = (id: number) => dispatch({ type: "decrement", id });
+
+  const increment = useCallback(
+    (id: number) => dispatch({ type: "increment", id }),
+    []
+  );
+
+  const decrement = useCallback(
+    (id: number) => dispatch({ type: "decrement", id }),
+    []
+  );
 
   return (
     <AttributesContext.Provider value={{ attributes, increment, decrement }}>
