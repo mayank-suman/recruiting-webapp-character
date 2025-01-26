@@ -14,10 +14,11 @@ function Item({
   const areRequirementsMet = checkAttributes(classAttributes, attributes);
 
   return (
-    <button onClick={() => setSelectedClass(className)}>
-      <div className={`class-item ${areRequirementsMet ? "highlight" : ""}`}>
-        {className}
-      </div>
+    <button
+      onClick={() => setSelectedClass(className)}
+      className={`${areRequirementsMet ? "highlight" : ""}`}
+    >
+      <div>{className}</div>
     </button>
   );
 }

@@ -11,13 +11,15 @@ function List({
   return (
     <section className="App-section">
       <h2>Class</h2>
-      {Object.entries(CLASS_LIST).map((classItem: [Class, Attributes]) => (
-        <Item
-          key={classItem[0]}
-          classItem={classItem}
-          setSelectedClass={setSelectedClass}
-        />
-      ))}
+      <div className="class-list-container">
+        {Object.entries(CLASS_LIST).map((classItem: [Class, Attributes]) => (
+          <Item
+            key={classItem[0]}
+            classItem={classItem}
+            setSelectedClass={setSelectedClass}
+          />
+        ))}
+      </div>
     </section>
   );
 }
