@@ -26,6 +26,12 @@
   color: white;
 }
 
+.App-section-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0;
+}
+
 .App-section {
   flex: 1 1 0;
   background-color: hsl(220deg 13% 13%);
@@ -48,4 +54,27 @@
 .class-item.highlight {
   color: red;
   font-weight: bold;
+}
+
+.attributes-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.attribute-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.attribute-item p {
+  display: inline-block;
+  text-align: left;
+}
+
+.attribute-item p:first-child {
+  min-width: 100px;
+  margin-right: 10px;
 }

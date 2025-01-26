@@ -5,23 +5,26 @@ function Item({ attribute }: { attribute: DerivedAttributes }) {
   const { increment, decrement } = useAttributes();
 
   return (
-    <div>
-      {attribute.label} : {attribute.value} &nbsp;
-      <button
-        onClick={() => {
-          increment(attribute.id);
-        }}
-      >
-        +
-      </button>
-      &nbsp;
-      <button
-        onClick={() => {
-          decrement(attribute.id);
-        }}
-      >
-        -
-      </button>
+    <div className="attribute-item">
+      <p>{attribute.label} :</p>
+      <p>{attribute.value}</p>
+      <div>
+        <button
+          onClick={() => {
+            increment(attribute.id);
+          }}
+        >
+          +
+        </button>
+        &nbsp;&nbsp;
+        <button
+          onClick={() => {
+            decrement(attribute.id);
+          }}
+        >
+          -
+        </button>
+      </div>
     </div>
   );
 }

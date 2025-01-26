@@ -8,10 +8,12 @@ function App() {
     <AttributesProvider>
       <div className="App">
         <header className="App-header">
-          <h1>Dnd Character Sheet</h1>
+          <h1>DnD Character Sheet</h1>
         </header>
-        <Attributes />
-        <Class />
+        <div className="App-section-container">
+          <Attributes />
+          <Class />
+        </div>
       </div>
     </AttributesProvider>
   );
