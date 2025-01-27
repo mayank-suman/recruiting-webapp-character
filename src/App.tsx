@@ -1,7 +1,7 @@
 import "./App.css";
-import Attributes from "./components/attributes/list";
-import Class from "./components/class/index";
-import AttributesProvider from "./context/attributesContext";
+import Attributes from "./components/attributes";
+import Class from "./components/class";
+import AttributesProvider from "./context/attributesProvider";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { AttributesContext } from "../context/attributesContext";
+import { AttributesContext } from "../context/attributesProvider";
 
 function useAttributes() {
   const attributes = React.useContext(AttributesContext);
