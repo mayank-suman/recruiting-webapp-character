@@ -1,13 +1,13 @@
 # A Note for reviewer
-- Thanks for the giving me opportunity for taking part to work on the task.
-- With the given time frame I am able to complete the first 3 requirements. I wanted to share the overview of the approach I took for achieve the requirements:
-  - In the `App.tsx` component you will notice the presence of `AttributesProvider` which mainly encapsulates the attributes state. The reason for creating this context is state and its action creators could be accessed anywhere from the app.
-  - Inside `AttributesProvider` you will find that the state is managed through the `useReducer` hook. The reason this hook is used because:
-    1. First, we wanted to create a state in which each `attribute` value could be stored and managed individually.
-    2. Second, its a cleaner way for creating and managing complex state like these.
-  - Create a separate hook call `useAttributes` which enables the access of attributes from any component. One example of its use is found in `components/class/items.tsx` to get the attributes derived state which makes it easier to make the calculation done `checkAttributes` required for highlighting the class button.
-  - All code is defined using `Typescript`. I find it helpful in writing the predictable code. Types definition can be found at root level in the `types.ts` or inline in the code.
-  - The code structure and the variable names are defined which make the code self explanatory but if you still find any thing not clear enough, I will explain on email or call.
+> - Thanks for the giving me opportunity for taking part to work on the task.
+> - With the given time frame I am able to complete the first 3 requirements. I wanted to share the overview of the approach I took for achieve the requirements:
+>   - In the `App.tsx` component you will notice the presence of `AttributesProvider` which mainly encapsulates the attributes state. The reason for creating this context is state and its action creators could be accessed anywhere from the app.
+>   - Inside `AttributesProvider` you will find that the state is managed through the `useReducer` hook. The reason this hook is used because:
+>     1. First, we wanted to create a state in which each `attribute` value could be stored and managed individually.
+>     2. Second, its a cleaner way for creating and managing complex state like these.
+>   - Create a separate hook call `useAttributes` which enables the access of attributes from any component. One example of its use is found in `components/class/items.tsx` to get the attributes derived state which makes it easier to make the calculation done `checkAttributes` required for highlighting the class button.
+>   - All code is defined using `Typescript`. I find it helpful in writing the predictable code. Types definition can be found at root level in the `types.ts` or inline in the code.
+>   - The code structure and the variable names are defined which make the code self explanatory but if you still find any thing not clear enough, I will explain on email or call.
 
 # recruiting-webapp-character
 React coding test
